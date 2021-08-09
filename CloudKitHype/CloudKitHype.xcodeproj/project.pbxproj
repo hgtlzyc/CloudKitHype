@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9224B2126C1A73A00BA36B2 /* HypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9224B2026C1A73A00BA36B2 /* HypeListViewController.swift */; };
+		E937E04526C187AF001394DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937E04426C187AF001394DD /* AppDelegate.swift */; };
+		E937E04726C187AF001394DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937E04626C187AF001394DD /* SceneDelegate.swift */; };
+		E937E04C26C187AF001394DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E937E04A26C187AF001394DD /* Main.storyboard */; };
+		E937E04E26C187B1001394DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E937E04D26C187B1001394DD /* Assets.xcassets */; };
+		E937E05126C187B1001394DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E937E04F26C187B1001394DD /* LaunchScreen.storyboard */; };
+		E937E05B26C187F9001394DD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E937E05A26C187F9001394DD /* CloudKit.framework */; };
+		E937E06526C18C3E001394DD /* Hype.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937E06426C18C3E001394DD /* Hype.swift */; };
+		E937E06726C19472001394DD /* HypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937E06626C19472001394DD /* HypeController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E9224B2026C1A73A00BA36B2 /* HypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeListViewController.swift; sourceTree = "<group>"; };
+		E937E04126C187AF001394DD /* CloudKitHype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitHype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E937E04426C187AF001394DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E937E04626C187AF001394DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E937E04B26C187AF001394DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E937E04D26C187B1001394DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E937E05026C187B1001394DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E937E05226C187B1001394DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E937E05826C187F3001394DD /* CloudKitHype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitHype.entitlements; sourceTree = "<group>"; };
+		E937E05A26C187F9001394DD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E937E06426C18C3E001394DD /* Hype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hype.swift; sourceTree = "<group>"; };
+		E937E06626C19472001394DD /* HypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E937E03E26C187AF001394DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E937E05B26C187F9001394DD /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E937E03826C187AF001394DD = {
+			isa = PBXGroup;
+			children = (
+				E937E04326C187AF001394DD /* CloudKitHype */,
+				E937E04226C187AF001394DD /* Products */,
+				E937E05926C187F9001394DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E937E04226C187AF001394DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E937E04126C187AF001394DD /* CloudKitHype.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E937E04326C187AF001394DD /* CloudKitHype */ = {
+			isa = PBXGroup;
+			children = (
+				E937E06126C1891F001394DD /* Models */,
+				E937E06026C1890F001394DD /* Controllers */,
+				E937E05D26C188CC001394DD /* Views */,
+				E937E05C26C18855001394DD /* Resources */,
+			);
+			path = CloudKitHype;
+			sourceTree = "<group>";
+		};
+		E937E05926C187F9001394DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E937E05A26C187F9001394DD /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E937E05C26C18855001394DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E937E05826C187F3001394DD /* CloudKitHype.entitlements */,
+				E937E04426C187AF001394DD /* AppDelegate.swift */,
+				E937E04626C187AF001394DD /* SceneDelegate.swift */,
+				E937E04D26C187B1001394DD /* Assets.xcassets */,
+				E937E05226C187B1001394DD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E937E05D26C188CC001394DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E937E05E26C188DA001394DD /* CustomViews */,
+				E937E05F26C188F8001394DD /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E937E05E26C188DA001394DD /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E937E05F26C188F8001394DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E937E04A26C187AF001394DD /* Main.storyboard */,
+				E937E04F26C187B1001394DD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E937E06026C1890F001394DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E937E06326C18930001394DD /* ModelControllers */,
+				E937E06226C18924001394DD /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E937E06126C1891F001394DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E937E06426C18C3E001394DD /* Hype.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E937E06226C18924001394DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9224B2026C1A73A00BA36B2 /* HypeListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E937E06326C18930001394DD /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E937E06626C19472001394DD /* HypeController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E937E04026C187AF001394DD /* CloudKitHype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E937E05526C187B1001394DD /* Build configuration list for PBXNativeTarget "CloudKitHype" */;
+			buildPhases = (
+				E937E03D26C187AF001394DD /* Sources */,
+				E937E03E26C187AF001394DD /* Frameworks */,
+				E937E03F26C187AF001394DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudKitHype;
+			productName = CloudKitHype;
+			productReference = E937E04126C187AF001394DD /* CloudKitHype.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E937E03926C187AF001394DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E937E04026C187AF001394DD = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = E937E03C26C187AF001394DD /* Build configuration list for PBXProject "CloudKitHype" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E937E03826C187AF001394DD;
+			productRefGroup = E937E04226C187AF001394DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E937E04026C187AF001394DD /* CloudKitHype */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E937E03F26C187AF001394DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E937E05126C187B1001394DD /* LaunchScreen.storyboard in Resources */,
+				E937E04E26C187B1001394DD /* Assets.xcassets in Resources */,
+				E937E04C26C187AF001394DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E937E03D26C187AF001394DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E937E04526C187AF001394DD /* AppDelegate.swift in Sources */,
+				E937E06726C19472001394DD /* HypeController.swift in Sources */,
+				E9224B2126C1A73A00BA36B2 /* HypeListViewController.swift in Sources */,
+				E937E04726C187AF001394DD /* SceneDelegate.swift in Sources */,
+				E937E06526C18C3E001394DD /* Hype.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E937E04A26C187AF001394DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E937E04B26C187AF001394DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E937E04F26C187B1001394DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E937E05026C187B1001394DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E937E05326C187B1001394DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E937E05426C187B1001394DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E937E05626C187B1001394DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudKitHype/Resources/CloudKitHype.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNQLC6535R;
+				INFOPLIST_FILE = CloudKitHype/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijia.CloudKitHype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E937E05726C187B1001394DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudKitHype/Resources/CloudKitHype.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNQLC6535R;
+				INFOPLIST_FILE = CloudKitHype/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijia.CloudKitHype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E937E03C26C187AF001394DD /* Build configuration list for PBXProject "CloudKitHype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E937E05326C187B1001394DD /* Debug */,
+				E937E05426C187B1001394DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E937E05526C187B1001394DD /* Build configuration list for PBXNativeTarget "CloudKitHype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E937E05626C187B1001394DD /* Debug */,
+				E937E05726C187B1001394DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E937E03926C187AF001394DD /* Project object */;
+}
