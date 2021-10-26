@@ -26,34 +26,58 @@ class HypeListViewController: UIViewController {
     }
     
     @IBAction func createNewTapped(_ sender: Any) {
+        presentAddHypeController(for: nil)
+        
+    }///End Of Create new tapped
+    
+    func presentAddHypeController(for hype: Hype?) {
         let alertController = UIAlertController(title: "something hype", message: "what is hype today", preferredStyle: .alert)
         
         alertController.addTextField { txField in
             txField.placeholder = "enter here"
             txField.autocorrectionType = .yes
             txField.autocapitalizationType = .none
+            if let hype = hype {
+                txField.text = hype.body
+            }
+            
         }
         
         let addAction = UIAlertAction(title: "Send", style: .default) { _ in
             guard let body = alertController.textFields?.first?.text else { return }
-            HypeController.shared.saveHype(with: body) { result in
-                switch result {
-                case .success(let hype):
-                    guard let hype = hype else { return }
-                    HypeController.shared.hypes.insert(hype, at: 0)
-                    self.updateViews()
-                case .failure(let err):
-                    print(err)
+            
+                if let hype = hype {
+                    HypeController.shared.update(hype) { result in
+                        switch result {
+                        case .success(_):
+                            self.updateViews()
+                        case .failure(let err):
+                            print(err)
+                        }
+                        
+                    }
+                    
+                } else {
+                    HypeController.shared.saveHype(with: body) { result in
+                        switch result {
+                        case .success(let hype):
+                            guard let hype = hype else { return }
+                            HypeController.shared.hypes.insert(hype, at: 0)
+                            self.updateViews()
+                        case .failure(let err):
+                            print(err)
+                        }
+                        
+                    }
                 }
-
-            }
-    
+            
         }///End Of add action
         
         alertController.addAction(addAction)
         present(alertController, animated: true, completion: nil)
-        
-    }///End Of Create new tapped
+    }
+    
+    
     
     @objc func refreashNow() {
         print("on")
@@ -61,9 +85,12 @@ class HypeListViewController: UIViewController {
     }
     
     func updateViews() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+            self.tableView.reloadData()
+            
+        }///End Of GCD
     }
     
     func loadData() {
@@ -103,6 +130,19 @@ extension HypeListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.detailTextLabel?.text = "\(hype.timestamp)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let hype = HypeController.shared.hypes[indexPath.row]
+        presentAddHypeController(for: hype)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if case .delete = editingStyle {
+            let hypeToDelete = HypeController.shared.hypes[indexPath.row]
+            print(hypeToDelete.body)
+            print(HypeController.shared.hypes.first{ $0 === hypeToDelete }?.body)
+        }
     }
     
 }

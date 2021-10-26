@@ -69,6 +69,29 @@ class HypeController {
     
     }///End Of fetchAllHypes
     
+    func update(_ hype: Hype, completion: @escaping (Result<Hype, HypeError>) ->Void ) {
+        let record = CKRecord(hype: hype)
+        
+        let operation = CKModifyRecordsOperation(recordsToSave: [record])
+        
+        operation.savePolicy = .changedKeys
+        operation.qualityOfService = .userInteractive
+        operation.modifyRecordsCompletionBlock = { ( records, _, error ) in
+            if let error = error {
+                return completion(.failure(.ckError(error)))
+            }
+            
+            guard let record = records?.first,
+                  let updatedHype = Hype(ckRecord: record) else { return completion(.failure(.couldNotUnwrap)) }
+            
+            print("Updated \(updatedHype.body) success")
+            completion(.success(updatedHype))
+            
+        }///End Of completion
+        
+        publicDB.add(operation)
+        
+    }///End Of update
     
     // MARK: - Private Init
     private init() {}
